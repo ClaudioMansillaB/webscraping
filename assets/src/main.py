@@ -1,8 +1,9 @@
 import requests 
 from bs4 import BeautifulSoup
 import pandas as pd
+import os
 
-def main(link: str):
+def main(link: str, save_path: str):
     """
     This file is dedicated to web scraping the data from the website.
     """
@@ -41,12 +42,16 @@ def main(link: str):
 
 
 
-    df_lessons.to_csv("lessons-ph_es.csv", index = False)
+    df_lessons.to_csv(
+        os.path.join(save_path,"lessons-ph_es.csv"), index = False
+        )
 
 
 
 if __name__ == "__main__":
     link = "http://programminghistorian.org/es/lecciones/"
+    save_path = os.path.join('data')
     main(
-        link = link
+        link = link,
+        save_path = save_path
         )
