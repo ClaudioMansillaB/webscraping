@@ -4,3 +4,12 @@ html, body {
     color: white;
 }
 
+.data-container {
+    background-color: #f0f0f0; /* Light grey background */
+    border: 1px solid #ddd; /* Light grey border */
+    padding: 20px; /* Padding inside the container */
+    margin: 20px 0; /* Margin outside the container */
+    font-family: Arial, sans-serif; /* Font style */
+    color: #333; /* Dark grey text color */
+  }
+
